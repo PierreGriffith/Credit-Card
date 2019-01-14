@@ -13,7 +13,8 @@ npm run test
 made in  [reactjs](https://reactjs.org/)
 Unit test use [enzyme](https://airbnb.io/enzyme/)
 
- [image](https://imgur.com/a/DujCmRX)
+
+
 
 >there is a bank card interface where the first letter is parsed.
 if the first letter is a 3
