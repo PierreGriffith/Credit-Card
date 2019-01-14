@@ -1,7 +1,9 @@
 #  credit card simulator.
 
+[img](https://imgur.com/a/DujCmRX)
 
-for launch:
+
+for install and launch:
 npm install
 npm run start
 
