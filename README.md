@@ -2,6 +2,14 @@
 
 [img](https://imgur.com/a/DujCmRX)
 
+
+for install and launch:
+npm install
+npm run start
+
+for test:
+npm run test
+
 made in  [reactjs](https://reactjs.org/)
 Unit test use [enzyme](https://airbnb.io/enzyme/)
 
