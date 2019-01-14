@@ -19,5 +19,3 @@ if the first letter is a 3
  if it's a 4 a visa,
  if it's a mastercard and if it's a 6 discover.
 and if it's not a number an error is given
-
-
