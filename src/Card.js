@@ -2,52 +2,56 @@ import React from 'react';
 import './Card.css';
 
 
-const JSON_DATA = [
-    {"name":"visa", "first_number":"4", "limit": "13"},
-    {"name":"mastercard", "first_number":"5", "limit": " 16"},
-    {"name":"discover","first_number":"6", "limit": "16"},
-    {"name":"american express","first_number":"3", "limit": "15"},
-    {"name":"error","first_number":"0", "limit": "0"},
-]
-
-
-const logofooter = require('./img/img-card/Visa.png');
-
-
 class Card extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {valueCard: '', valueError: ''};
-
+        this.state = {
+            inputCard: '',
+            descCard: '',
+        };
         this.handleChangeCard = this.handleChangeCard.bind(this);
     }
 
     handleChangeCard(event) {
-        var first_number = event.target.value[0];
+        let first_number = event.target.value[0];
 
-        this.setState({valueCard: event.target.value});
-    }
+        switch (first_number){
+            case '3':
+                this.setState({descCard: 'american express' });
+                break;
+            case '4':
+                this.setState({descCard: 'visa' });
+                break;
+            case '5':
+                this.setState({descCard: 'mastercard' });
+                break;
+            case '6':
+                this.setState({descCard: 'discover' });
+                break;
+            case undefined:
+                this.setState({descCard: '' });
+                break;
+            default:
+                this.setState({descCard: 'unregognizable card' });
+        }
+        this.setState({inputCard: event.target.value});
+        }
 
-
-    ParseCardJson(number){
-
-    }
 
 
     render() {
         return (
-            <form className="credit-card">
+            <form className="credit-card card--animation">
             <div className="form-header">
                 <h4 className="title">Credit card detail</h4>
-                <img className='credit-card-logo' alt='credit-card' src={logofooter}/>
-                <div className="error-number">
-                    <p>{this.state.valueCard}</p>
+                <div className="description-card">
+                    <p className="input-card">{this.state.descCard}</p>
                 </div>
             </div>
 
             <div className="form-body">
                 {/* Card Number */}
-                <input type="text" className="card-number" placeholder="Card Number" value={this.state.valueCard} onChange={this.handleChangeCard}/>
+                <input type="text" className="card-number" placeholder="Card Number" value={this.state.inputCard} onChange={this.handleChangeCard}/>
 
 
                     {/* Date Field */}

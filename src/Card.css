@@ -26,7 +26,7 @@ body {
     border           : 1px solid #ddd;
     border-radius    : 6px;
     background-color : #fff;
-    box-shadow       : 1px 2px 3px 0px rgba(0,0,0,0.10);
+    box-shadow       : 1px 2px 3px 0 rgba(0,0,0,0.10);
 }
 
 .form-header {
@@ -119,7 +119,7 @@ body {
     border-radius : 6px;
     background    : #fff;
 }
-.error-number,
+
 .cvv-details {
     float         : right;
     margin-bottom : 20px;
@@ -133,15 +133,9 @@ body {
     font-size  : 12px;
 }
 
-.error-number {
+.description-card {
     font-size  : 10px;
-    color: red;
+    color: #3ab94e;
     margin-left: 10px;
     margin-top: -5px;
-}
-
-.credit-card-logo{
-    width: 40px;
-    margin-left: 15px;
-    margin-top: -3px;
 }
